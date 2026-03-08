@@ -1,3 +1,8 @@
+## 🏗️ Architecture
+- **Deployments**: Manages Pod lifecycle for Web (Node.js) and DB (MongoDB).
+- **Services**: `NodePort` for external access; `ClusterIP` for secure internal DB discovery.
+- **Config & Secrets**: Decouples credentials from code using K8s environment variables.
+
 #  Full-Stack Node.js Login App on Kubernetes
 
 This repository contains an optimized, production-ready version of the "K8s in 1 Hour" demo. It features a lightweight Docker image, automated database seeding, and secure secret management.
