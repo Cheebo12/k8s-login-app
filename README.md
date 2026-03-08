@@ -62,17 +62,3 @@ kubectl rollout restart deployment webapp-deployment
 ```bash
 kubectl delete pod -l app=mongo
 ```
-### 2. Apply Manifests (Order Matters)
-```bash
-kubectl apply -f mongo-secret.yaml
-kubectl apply -f mongo-config.yaml
-kubectl apply -f mongo.yaml
-kubectl apply -f webapp.yaml
-```
-### 2. Apply Manifests (Order Matters)
-```bash
-kubectl apply -f mongo-secret.yaml
-kubectl apply -f mongo-config.yaml
-kubectl apply -f mongo.yaml
-kubectl apply -f webapp.yaml
-```
