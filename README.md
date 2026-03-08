@@ -1,4 +1,4 @@
-## 🏗️ Architecture
+# 🏗️ Architecture
 - **Deployments**: Manages Pod lifecycle for Web (Node.js) and DB (MongoDB).
 - **Services**: `NodePort` for external access; `ClusterIP` for secure internal DB discovery.
 - **Config & Secrets**: Decouples credentials from code using K8s environment variables.
