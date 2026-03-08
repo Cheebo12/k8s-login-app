@@ -3,7 +3,7 @@
 This repository contains an optimized, production-ready version of the "K8s in 1 Hour" demo. It features a lightweight Docker image, automated database seeding, and secure secret management.
 
 ## 🛠 Improvements & Optimizations
-- **Slim Image**: Reduced size from 1.2GB to **~160MB** using `node:20-slim`.
+- **Slim Image**: Reduced size from 512MB to **76.6MB** using `node:20-slim`.
 - **Security**: Switched to `bcryptjs` for native hashing without Python dependencies.
 - **Automation**: `createuser.js` runs automatically on startup to sync the App User with K8s Secrets.
 - **Sync Logic**: Automatically wipes old users and creates a new one whenever the Secret changes.
