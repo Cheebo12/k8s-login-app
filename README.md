@@ -64,7 +64,7 @@ kubectl apply -f mongo-secret.yaml
 ```bash
 kubectl rollout restart deployment webapp-deployment
 ```
-#### Restart Mongo 
+#### Restart MongoDB Pod
 ```bash
 kubectl delete pod -l app=mongo
 ```
