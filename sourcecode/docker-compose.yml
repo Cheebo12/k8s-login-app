@@ -7,7 +7,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      MONGO_URL: "mongodb://admin:admin123@mongo:27017/simple-login-app?authSource=admin"
+      MONGO_URL: "mongodb://${dbUser}:${dbPass}@mongodb-service:27017/simple-login-app?authSource=admin"
     depends_on:
       - mongo
 
