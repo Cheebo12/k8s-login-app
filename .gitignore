@@ -1,9 +1,19 @@
-node_modules
-npm-debug.log
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+*.Zone.Identifier
+
+# Installation binaries
+*.deb
+
+# Logs
 *.log
-.git
-.gitignore
+npm-debug.log*
+
+# Local environment secrets
 .env
-mongodb-mongosh_*.deb
-docker-compose.yml
-Dockerfile
+EOF
