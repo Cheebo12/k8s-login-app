@@ -5,7 +5,7 @@
 
 #  Full-Stack Node.js Login App on Kubernetes
 
-This repository contains an optimized, production-ready version of the "K8s in 1 Hour" demo. It features a lightweight Docker image, automated database seeding, and secure secret management.
+This repository contains an optimized, production-ready version. It features a lightweight Docker image, automated database seeding, and secure secret management.
 
 ## 🛠 Improvements & Optimizations
 - **Slim Image**: Reduced size from 512MB to **76.6MB** using `node:20-slim`.
