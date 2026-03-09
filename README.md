@@ -3,7 +3,7 @@
 - **Services**: `NodePort` for external access; `ClusterIP` for secure internal DB discovery.
 - **Config & Secrets**: Decouples credentials from code using K8s environment variables.
 
-#  Full-Stack Node.js Login App on Kubernetes
+#  Production-Ready Node.js Login App on Kubernetess
 
 This repository contains an optimized, production-ready version. It features a lightweight Docker image, automated database seeding, and secure secret management.
 
@@ -16,7 +16,8 @@ This repository contains an optimized, production-ready version. It features a l
 ---
 
 ##  K8s Manifest Files
-* `mongo-secret.yaml` - Base64 encoded credentials (`user` / `pass`).
+* `mongo-secret.yaml` - Stores database credentials securely and injects them
+ into the application as environment variables. (`user` / `pass`).
 * `mongo-config.yaml` - MongoDB connection URL.
 * `mongo.yaml` - MongoDB Deployment and ClusterIP Service.
 * `webapp.yaml` - Node.js App Deployment and NodePort Service.
