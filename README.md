@@ -16,7 +16,7 @@ This repository contains an optimized, production-ready version. It features a l
 ---
 
 ##  K8s Manifest Files
-* `mongo-secret.yaml` - Base64 encoded credentials (`mongouser` / `mongopassword`).
+* `mongo-secret.yaml` - Base64 encoded credentials (`user` / `pass`).
 * `mongo-config.yaml` - MongoDB connection URL.
 * `mongo.yaml` - MongoDB Deployment and ClusterIP Service.
 * `webapp.yaml` - Node.js App Deployment and NodePort Service.
