@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: cheebo1/login-app:v11
+        image: cheebo1/login-app:v12
         ports:
         - containerPort: 3000
         env:

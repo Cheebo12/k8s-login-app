@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 // Use the secret values from Kubernetes environment variables
 const dbUser = process.env.MONGO_USER;
 const dbPass = process.env.MONGO_PASS;
+const dbHost = process.env.MONGO_HOST || "mongodb-service";
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB
 mongoose.connect(
-`mongodb://${dbUser}:${dbPass}@mongodb-service:27017/simple-login-app?authSource=admin`
+  `mongodb://${dbUser}:${dbPass}@${dbHost}:27017/simple-login-app?authSource=admin`
 )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));

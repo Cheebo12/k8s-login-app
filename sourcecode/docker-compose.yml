@@ -3,20 +3,24 @@ version: "3.9"
 services:
   app:
     build: .
-    container_name: loginapp
+    image: cheebo1/login-app:v12
+    container_name: login-app
     ports:
       - "3000:3000"
     environment:
-      MONGO_URL: "mongodb://${dbUser}:${dbPass}@mongodb-service:27017/simple-login-app?authSource=admin"
+      - MONGO_USER=mongouser
+      - MONGO_PASS=mongopassword
+      - MONGO_HOST=mongodb 
+      - MONGO_PORT=27017
     depends_on:
-      - mongo
+      - mongodb
 
-  mongo:
+  mongodb:
     image: mongo:7
-    container_name: mongo
+    container_name: mongodb
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: admin123
+      - MONGO_INITDB_ROOT_USERNAME=mongouser
+      - MONGO_INITDB_ROOT_PASSWORD=mongopassword
     ports:
       - "27017:27017"

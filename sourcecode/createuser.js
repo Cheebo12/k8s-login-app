@@ -1,15 +1,13 @@
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-
 const dbUser = process.env.MONGO_USER;
 const dbPass = process.env.MONGO_PASS;
+const dbHost = process.env.MONGO_HOST || "mongodb-service"; 
 
 async function main() {
   try {
+    // 2. Use the variable instead of hardcoding the name
     await mongoose.connect(
- 	`mongodb://${dbUser}:${dbPass}@mongodb-service:27017/simple-login-app?authSource=admin`    
-	);
-
+        `mongodb://${dbUser}:${dbPass}@${dbHost}:27017/simple-login-app?authSource=admin`
+        );
     console.log("MongoDB connected");
 
     const User = mongoose.model(
