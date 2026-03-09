@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+*.log
+.git
+.gitignore
+.env
+mongodb-mongosh_*.deb
+docker-compose.yml
+Dockerfile

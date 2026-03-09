@@ -22,6 +22,7 @@ This repository contains an optimized, production-ready version. It features a l
 * `mongo.yaml` - MongoDB Deployment and ClusterIP Service.
 * `webapp.yaml` - Node.js App Deployment and NodePort Service.
 
+HEAD
 ## Tech Stack
 
 - Node.js
@@ -31,6 +32,8 @@ This repository contains an optimized, production-ready version. It features a l
 - Kubernetes
 - bcryptjs
 
+
+3675ef73ceea7626b4bdc7988bab10957f4c92b0
 ---
 
 ##  Getting Started
